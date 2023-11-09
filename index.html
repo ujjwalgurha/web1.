@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> YOUNG SCIENCE</title>
+        <link rel="styleSheet" type="text/css" href="index.css"\>
+    </head>
+    <body>
+
+        <div class = "header">
+            <center><h2> SCIENCE CORNER </h2></center>
+          
+
+
+
+
+            <div style="font-family: Arial, sans-serif; font-size: 36px; color: #0077B5;">
+                Young <span style="color: #FF5722;">Science</span>
+            </div>
+            
+  
+              <div class = "menu">
+                  <a href = "about.html"> About Us </a><br>
+                  <a href = "follow.html"> Follow Us</a><br>
+              </div>
+          </div>
+        
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <meta charset="UTF-8">
+              <title>Chatbox</title>
+              <style>
+                  body {
+                      font-family: Arial, sans-serif;
+                  }
+                  .chatbox {
+                      width: 300px;
+                      margin: 50 auto;
+                      padding: 10px;
+                      border: 10px solid #ccc;
+                      background-color: #f9f9f9;
+                  }
+                  .user-message {
+                   
+                      background-color: #3498db;
+                      color: #fff;
+                      padding: 5px;
+                      border-radius: 5px;
+                      margin: 5px 0;
+                      text-align: right;
+                  }
+                  .bot-message {
+                     
+                      background-color: #eee;
+                      padding: 5px;
+                      border-radius: 5px;
+                      margin: 5px 0;
+                  }
+              </style>
+          </head>
+          <body>
+              <div class="chatbox">
+                  <div class="bot-message">Hello! How can I assist you today?</div>
+              </div>
+              <input type="text" id="user-input" placeholder="Type your message">
+              <button onclick="sendMessage()">Send</button>
+          
+              <script>
+                  function appendUserMessage(message) {
+                      var chatbox = document.querySelector(".chatbox");
+                      var userMessageElement = document.createElement("div");
+                      userMessageElement.className = "user-message";
+                      userMessageElement.textContent = message;
+                      chatbox.appendChild(userMessageElement);
+                  }
+          
+                  function appendBotMessage(message) {
+                      var chatbox = document.querySelector(".chatbox");
+                      var botMessageElement = document.createElement("div");
+                      botMessageElement.className = "bot-message";
+                      botMessageElement.textContent = message;
+                      chatbox.appendChild(botMessageElement);
+                  }
+          
+                  function sendMessage() {
+                      var userMessage = document.getElementById("user-input").value;
+                      appendUserMessage(userMessage);
+                      document.getElementById("user-input").value = '';
+          
+                      // Simulated bot response (you can customize these responses)
+                      var botResponse = getBotResponse(userMessage);
+                      appendBotMessage(botResponse);
+                  }
+          
+                  function getBotResponse(userMessage) {
+                      // You can add custom logic here to generate bot responses based on user input.
+                      // This is a basic example, and you can expand on this with more complex responses.
+                      switch (userMessage.toLowerCase()) {
+                          case 'hello':
+                              return 'Hi there!';
+                          case 'how are you':
+                              return "I'm just a chatbot, but I'm doing fine!";
+                          case 'goodbye':
+                              return 'Goodbye! Have a great day!';
+                          default:
+                              return "I don't understand that. Please ask another question.";
+
+                              
+                      }
+                  }
+              </script>
+          </body>
+          </html>
+     
+
+          
+          <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Science Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the Science Web Page</h1>
+    </div>
+    <div class="content">
+        <h2>About Science</h2>
+        <p>
+            Science is the systematic study of the natural world through observation, experimentation, and analysis. It encompasses various disciplines, including physics, chemistry, biology, astronomy, and more.
+        </p>
+        
+        <h2>Topics in Science</h2>
+        <ul>
+            <li>Physics</li>
+            <li>Chemistry</li>
+            <li>Biology</li>
+            <li>Astronomy</li>
+            <li>Earth Sciences</li>
+        </ul>
+        
+        <h2>Latest Discoveries</h2>
+        <p>
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    /* Style for the pop-up box */
+                    .popup-box {
+                        display: none;
+                        position: fixed;
+                        top: 10px;
+                        right: 10px;
+                        background: #fff;
+                        border: 1px solid #ccc;
+                        padding: 10px;
+                        max-width: 300px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                    }
+                </style>
+            </head>
+            <body>
+                <!-- Latest Science Update Button -->
+                <button id="show-popup">Show Latest Science Update</button>
+            
+                <!-- Pop-up Box -->
+                <div class="popup-box" id="science-update">
+                    <h3>Latest Science Update</h3>
+                    <p>
+                        Here's the latest science news or update that you want to share with your visitors. You can include relevant information, links, and details here.
+                    </p>
+                    <button id="close-popup">Close</button>
+                </div>
+            
+                <script>
+                    // JavaScript to show and hide the pop-up
+                    document.getElementById("show-popup").addEventListener("click", function() {
+                        document.getElementById("science-update").style.display = "block";
+                    });
+            
+                    document.getElementById("close-popup").addEventListener("click", function() {
+                        document.getElementById("science-update").style.display = "none";
+                    });
+                </script>
+            </body>
+            </html>
+            
+
+        </p>
+        <h2>Science Resources</h2>
+        <p>
+            Explore our collection of articles, videos, and educational resources to learn more about various scientific topics.
+        </p>
+    </div>
+    <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* Style for the pop-up */
+        .popup {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Pop-up Trigger -->
+    <div class="overlay" id="welcomePopup">
+        <div class="popup">
+            <h2>Welcome to Our Website!</h2>
+            <p>🙏🙏We're glad you're here🙏🙏.</p>
+            <button onclick="closeWelcomePopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- Rest of Your Web Page Content -->
+    <h1>Your Web Page Content</h1>
+    <p>This is the content of your web page.</p>
+
+    <script>
+        // JavaScript to show the welcome pop-up on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("welcomePopup").style.display = "flex";
+        });
+
+        // JavaScript function to close the welcome pop-up
+        function closeWelcomePopup() {
+            document.getElementById("welcomePopup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+<h2>Astronomy</h2>
+<p>
+    Astronomy is the scientific study of celestial objects such as stars, planets, galaxies, and the universe as a whole. It seeks to understand the origins, evolution, and behavior of these objects. Here are some key topics in astronomy:
+</p>
+
+<ul>
+    <li>Stellar Astronomy: Study of stars, their properties, life cycles, and classification.</li>
+    <li>Planetary Science: Exploration and understanding of planets and other celestial bodies in our solar system.</li>
+    <li>Cosmology: Investigation of the universe's overall structure, evolution, and fate.</li>
+    <li>Astrophotography: Capturing stunning images of celestial objects in the night sky.</li>
+</ul>
+
+<p>
+    Explore the wonders of the universe, from the mysteries of black holes to the beauty of the night sky. Learn about famous astronomers, space missions, and the latest discoveries in the field of astronomy.
+</p>
+<h2>Physics</h2>
+<p>
+    Physics is the natural science that studies the fundamental principles governing the behavior of the physical universe. It encompasses a wide range of topics, including:
+</p>
+
+<ul>
+    <li>Mechanics: The study of motion, forces, and the fundamental laws that govern the behavior of objects in the physical world.</li>
+    <li>Thermodynamics: The science of heat, energy, and the conversion of energy from one form to another.</li>
+    <li>Electromagnetism: The study of electricity and magnetism, including topics like circuits, electromagnetic waves, and electromagnetic fields.</li>
+    <li>Quantum Mechanics: The branch of physics that deals with the behavior of subatomic particles and the fundamental nature of matter and energy.</li>
+</ul>
+
+<p>
+    Dive into the world of physics and explore the mysteries of the universe. Learn about groundbreaking experiments, famous physicists, and the role of physics in shaping our understanding of the cosmos.
+</p>
+<h2>Chemistry</h2>
+<p>
+    Chemistry is the scientific discipline that explores the composition, structure, properties, and changes of matter. It plays a vital role in understanding the world at the molecular and atomic level. Key areas of chemistry include:
+</p>
+
+<ul>
+    <li>Organic Chemistry: The study of carbon compounds and their reactions, essential in fields like pharmaceuticals and biochemistry.</li>
+    <li>Inorganic Chemistry: Focusing on non-carbon compounds and materials, including metals, minerals, and more.</li>
+    <li>Physical Chemistry: Investigating the physical and chemical properties of matter, including thermodynamics and kinetics.</li>
+    <li>Analytical Chemistry: Methods for identifying and quantifying substances, important in chemical analysis and quality control.</li>
+</ul>
+
+<p>
+    Explore the world of chemical reactions, the periodic table, and the incredible diversity of compounds that make up our universe. Learn about famous chemists, laboratory techniques, and the practical applications of chemistry in our everyday lives.
+</p>
+<h2>Biology</h2>
+<p>
+    Biology is the scientific study of life and living organisms. It encompasses a wide range of topics, from the microscopic world of cells to the ecosystems of our planet. Key areas of biology include:
+</p>
+
+<ul>
+    <li>Cell Biology: The study of the fundamental unit of life, the cell, and its processes.</li>
+    <li>Genetics: Exploring the inheritance of traits and the role of DNA in living organisms.</li>
+    <li>Ecology: Investigating the interactions between living organisms and their environment.</li>
+    <li>Evolutionary Biology: Understanding the processes that drive the diversity of life on Earth.</li>
+</ul>
+
+<p>
+    Discover the wonders of the natural world, from the intricate mechanisms of genetics to the complex ecosystems that sustain life. Learn about famous biologists, cutting-edge research, and the impact of biology on our health and the environment.
+</p>
+<h2>Earth Sciences</h2>
+<p>
+    Earth Sciences encompass a wide range of disciplines dedicated to understanding the Earth and its processes. These sciences help us explore the geological, meteorological, and environmental aspects of our planet. Key areas of Earth Sciences include:
+</p>
+
+<ul>
+    <li>Geology: The study of the Earth's structure, minerals, and the forces shaping its surface.</li>
+    <li>Meteorology: Investigation of the Earth's atmosphere, weather patterns, and climate systems.</li>
+    <li>Oceanography: The science of the world's oceans, their currents, marine life, and the impact on our climate.</li>
+    <li>Environmental Science: The study of the environment, ecosystems, and the impact of human activity on the Earth's ecology.</li>
+</ul>
+
+<p>
+    Explore the dynamic forces that shape our planet, from geological formations to weather patterns. Learn about natural disasters, climate change, and the sustainable management of Earth's resources.
+</p>
+
+<form>
+    <label for="search">Search:</label>
+    <input type="text" id="search" placeholder="Enter a keyword">
+    <button type="button" onclick="performSearch()">Search</button>
+</form>
+<div id="search-results">
+    <!-- Search results will be displayed here -->
+</div>
+<script>
+    function performSearch() {
+        // Get the user's search query from the input field
+        var searchQuery = document.getElementById("search").value;
+
+        // Your search logic here (replace with your specific implementation)
+        // For simplicity, we're just displaying the search query in the results div.
+        var resultsDiv = document.getElementById("search-results");
+        resultsDiv.innerHTML = "Search results for: " + searchQuery;
+    }
+     
+</script>
+
+
+
+        <div class = "intro">
+           <center> <h1> SCIENTIFIC LEARNING </h1>
+            <h2><p>I CREATE THIS PAGE TO HELP THE YOUTHS WHO WANT TO TAKE SCIENCE OR LIKE TO TAKE SCIENCE THIS TELL US ABOUT THE UNKONOWN FACTS OF SCIENCE.
+            </p></h2></center>
+        </div>
+
+        <div class = "grid">
+         
+            <div class = "camel">
+                <a href = "camel.html"><img src = "images/Q .png" width = 200 height = 200 /></a>
+                <h3><p> QUANTUM DOTS </p></h3>
+            </div>
+
+            <div class = "chameleon">
+                <a href = "chameleon.html"><img src = "images/MICO2.jpg" width = 200 height = 200 /></a>
+                <h3><p> QUANTUM NON-LINEAR MICROSCOPE </p></h3>
+            </div>
+
+            <div class = "pigeon">
+                <a href = "pigeon.html"><img src = "images/COSMOS.png" width = 200 height = 200 /></a>
+                <h3><p> COSMOS </p></h3>
+            </div>
+
+            <div class = "teddy-bear">
+                <a href = "teddy-bear.html"><img src = "images/EARTH.jpg" width = 200 height = 200 /></a>
+                <h3><p> EARTH SCIENCE </p></h3>
+            </div>
+
+            <div class = "panda">
+                <a href = "panda.html"><img src = "images/ASTRONOMY.jpg" width = 200 height = 200 /></a>
+                <h3><p> ASTRONOMY </p></h3>
+            </div>
+
+           
+            
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Social Media Login</title>
+            </head>
+            <body>
+                <h1>Login with Social Media</h1>
+            
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+            
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+            
+                    <button type="submit">Login</button>
+                </form>
+            
+                <h2>OR</h2>
+            
+                <h3>Login with Social Media:</h3>
+                <a href="https://www.facebook.com">Login with Facebook</a><br>
+              
+                <!-- Add links for other social media platforms as needed -->
+            
+            </body>
+            </html>
+                </footer>
+            </body>
+            </html>
+            </p></h2></center>
+       </div>
+
+    </div>
+
+</body>
+
+</html>
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    /* Add extra margin around the page content */
+                    body {
+                        margin: 20px;
+                    }
+            
+                    /* Increase padding within specific elements, e.g., a container */
+                    .content-container {
+                        padding: 20px;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>Your Web Page Content</h1>
+                <p>This is the content of your web page. You can adjust the margin and padding as needed to create more space.</p>
+            
+                <div class="content-container">
+                    <h2>Section with Extra Space</h2>
+                    <p>This section has increased padding to create more space around the content.</p>
+                </div>
+            </body>
+            </html>
+            
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Pop-up</title>
+    <style>
+        /* Style for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* Style for the pop-up */
+        .popup {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Style for the sign-in button */
+        #signInButton {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sign In Pop-up Trigger -->
+    <button id="signInButton">Sign In</button>
+
+    <!-- Sign In Pop-up -->
+    <div class="overlay" id="signInPopup">
+        <div class="popup">
+            <h2>Sign In with Social Media</h2>
+            <button onclick="signInWithGoogle()">Sign In with Google</button>
+            <button onclick="signInWithFacebook()">Sign In with Facebook</button>
+            <button onclick="closeSignInPopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js"></script>
+
+    <script>
+        // Initialize Firebase with your project config
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_AUTH_DOMAIN",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_STORAGE_BUCKET",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Firebase Authentication Providers
+        const googleProvider = new firebase.auth.GoogleAuthProvider();
+        const facebookProvider = new firebase.auth.FacebookAuthProvider();
+
+        // JavaScript to show the sign-in pop-up on button click
+        document.getElementById("signInButton").addEventListener("click", function() {
+            document.getElementById("signInPopup").style.display = "flex";
+        });
+
+        // JavaScript function to close the sign-in pop-up
+        function closeSignInPopup() {
+            document.getElementById("signInPopup").style.display = "none";
+        }
+
+        // Firebase Google Sign-In
+        function signInWithGoogle() {
+            firebase.auth().signInWithPopup(googleProvider)
+                .then((result) => {
+                    // User signed in
+                    console.log(result.user);
+                    closeSignInPopup();
+                    showUserInterface(result.user.displayName);
+                })
+                .catch((error) => {
+                    console.error(error.message);
+                });
+        }
+
+        // Firebase Facebook Sign-In
+        function signInWithFacebook() {
+            firebase.auth().signInWithPopup(facebookProvider)
+                .then((result) => {
+                    // User signed in
+                    console.log(result.user);
+                    closeSignInPopup();
+                    showUserInterface(result.user.displayName);
+                })
+                .catch((error) => {
+                    console.error(error.message);
+                });
+        }
+
+        // Function to show user interface after sign-in
+        function showUserInterface(username) {
+            alert(`Welcome, ${username}!`);
+            // Add code to display the user interface or redirect to a dashboard, etc.
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <!-- Your webpage content goes here -->
+
+    <script src="your-script.js"></script>
+</body>
+</html>
+module.exports = {
+    files: ["**/*.html", "css/**/*.css", "js/**/*.js"],
+    server: {
+        baseDir: "./",
+    },
+};
